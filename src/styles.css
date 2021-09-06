@@ -8,11 +8,12 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: #3a3240;
+  padding-bottom: 25px;
 }
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgb(174, 168, 222, 0.9);
