@@ -1,0 +1,14 @@
+.data {
+  max-width: 500px;
+  margin: 10px auto;
+  background-color: #3a3240;
+  color: #aea8de;
+  justify-items: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
