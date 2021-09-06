@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LeaderboardService } from './leaderboard.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LeaderboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
