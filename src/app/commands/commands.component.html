@@ -1,0 +1,11 @@
+<h1>Command Usage!</h1>
+<p *ngIf="!loaded">Commands loading...</p>
+<div *ngIf="loaded">
+  <div class="data" *ngFor="let command of commands">
+    <p class="name">/{{ command.command }} {{ command.subcommand }}</p>
+    <p class="uses">
+      This command has been used {{ command.uses.toLocaleString() }}
+      {{ command.uses === 1 ? "time" : "times" }}
+    </p>
+  </div>
+</div>

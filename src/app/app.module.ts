@@ -8,13 +8,17 @@ import { FooterComponent } from './footer/footer.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LeaderboardService } from './leaderboard.service';
+import { StarsComponent } from './stars/stars.component';
+import { CommandsComponent } from './commands/commands.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    StarsComponent,
+    CommandsComponent
   ],
   imports: [
     BrowserModule,

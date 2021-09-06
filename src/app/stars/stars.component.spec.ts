@@ -1,21 +1,22 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { HomeComponent } from './home.component';
+import { StarsComponent } from './stars.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('StarsComponent', () => {
+  let component: StarsComponent;
+  let fixture: ComponentFixture<StarsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomeComponent],
-      imports: [HttpClientModule],
+      declarations: [StarsComponent],
+      imports: [RouterTestingModule, HttpClientModule],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(StarsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
