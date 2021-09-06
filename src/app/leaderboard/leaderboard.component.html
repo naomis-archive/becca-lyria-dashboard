@@ -1,0 +1,19 @@
+<h1>Leaderboard!</h1>
+<p *ngIf="!serverId">No server ID!</p>
+<p *ngIf="!valid && !error && serverId">Leaderboard is loading...</p>
+<p *ngIf="error">That server does not have a leaderboard yet!</p>
+<div id="leaderboard" *ngIf="valid">
+  <h2>{{serverName}}'s Leaderboard</h2>
+  <div class="user" *ngFor="let user of leaderboard">
+    <img
+      class="avatar"
+      src="{{ user.avatar }}"
+      onError="this.onError=null;this.src='/assets/img/default.png'"
+    />
+    <div class="details">
+      <p class="username">{{ user.userTag || "unknown user" }}</p>
+      <p class="experience">{{ user.points }} XP</p>
+      <p class="level">Level {{ user.level }}</p>
+    </div>
+  </div>
+</div>
