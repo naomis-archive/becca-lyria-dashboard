@@ -1,7 +1,7 @@
 export interface LeaderboardInt {
   serverID: string;
   serverName: string;
-  users: [LeaderboardUserInt];
+  users: LeaderboardUserInt[];
 }
 
 export interface LeaderboardUserInt {

@@ -1,7 +1,7 @@
 export interface StarsInt {
   serverName: string;
   serverID: string;
-  users: [StarsUserInt];
+  users: StarsUserInt[];
 }
 
 export interface StarsUserInt {
