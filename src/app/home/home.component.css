@@ -1,0 +1,19 @@
+.custom-button {
+  font-size: 1.5em;
+  background-color: #3a3240;
+  color: #aea8de;
+  padding: 0.25em 1em;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.custom-button:hover {
+  background-color: #aea8de;
+  color: #3a3240;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+p {
+  font-size: 1.25em;
+}
