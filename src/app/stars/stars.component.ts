@@ -29,7 +29,7 @@ export class StarsComponent implements OnInit {
           this.serverName = data.serverName;
           this.valid = true;
         },
-        (error) => {
+        () => {
           this.error = true;
         }
       );
