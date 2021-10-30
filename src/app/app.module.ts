@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LeaderboardService } from './leaderboard.service';
 import { StarsComponent } from './stars/stars.component';
 import { CommandsComponent } from './commands/commands.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommandsComponent } from './commands/commands.component';
     FooterComponent,
     LeaderboardComponent,
     StarsComponent,
-    CommandsComponent
+    CommandsComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
