@@ -28,7 +28,7 @@ export class StatsComponent implements OnInit {
           this.commands = data.sort((a, b) => b.commandUses - a.commandUses);
           this.valid = true;
         },
-        (error) => {
+        () => {
           this.error = true;
         }
       );
