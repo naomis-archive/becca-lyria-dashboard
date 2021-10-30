@@ -1,0 +1,21 @@
+<h1>General Stats!</h1>
+<p *ngIf="!stat">Invalid Stat!</p>
+<p *ngIf="!valid && !error && stat">Stats loading...</p>
+<p *ngIf="error">Those stats could not be loaded!</p>
+<div id="server-commands" *ngIf="valid && commands.length">
+  <h2>Server Command Uses</h2>
+  <div class="server" *ngFor="let server of commands">
+    <img
+      class="avatar"
+      src="{{ server.serverAvatar }}"
+      onError="this.onError=null;this.src='/assets/img/default.png'"
+    />
+    <div class="details">
+      <p class="servername">{{ server.serverName }}</p>
+      <p class="commands">
+        {{ server.commandUses }}
+        {{ server.commandUses === 1 ? "command" : "commands" }} used!
+      </p>
+    </div>
+  </div>
+</div>

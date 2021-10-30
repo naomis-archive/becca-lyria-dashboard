@@ -1,0 +1,22 @@
+.server {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 500px;
+  margin: 10px auto;
+  background-color: #3a3240;
+  color: #aea8de;
+  justify-items: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.servername {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
