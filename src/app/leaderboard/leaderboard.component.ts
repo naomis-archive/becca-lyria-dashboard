@@ -30,7 +30,7 @@ export class LeaderboardComponent implements OnInit {
         this.leaderboard = data.users.sort((a, b) => b.level - a.level);
         this.serverName = data.serverName;
         this.valid = true;
-      }, (error) => {
+      }, () => {
         this.error = true;
       });
     }
