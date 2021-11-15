@@ -1,10 +1,6 @@
 export interface LeaderboardInt {
   serverID: string;
   serverName: string;
-  users: LeaderboardUserInt[];
-}
-
-export interface LeaderboardUserInt {
   userID: string;
   userTag: string;
   avatar: string;

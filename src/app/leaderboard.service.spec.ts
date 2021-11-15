@@ -18,30 +18,30 @@ describe('LeaderboardService', () => {
   });
 
   it('should return expected data (HttpClient called once)', () => {
-    const expectedData = {
-      users: [
-        {
-          userID: '1',
-          userTag: 'test',
-          avatar: 'https://cdn.nhcarrigan.com/content/profile.jpg',
-          level: 1,
-          points: 100,
-          lastSeen: '2020-01-01',
-          cooldown: 1,
-        },
-        {
-          userID: '2',
-          userTag: 'test2',
-          avatar: 'https://cdn.nhcarrigan.com/content/profile.jpg',
-          level: 2,
-          points: 200,
-          lastSeen: '2020-01-01',
-          cooldown: 1,
-        },
-      ],
-      serverName: 'testy westy',
-      serverID: '1234',
-    };
+    const expectedData = [
+      {
+        serverName: 'testy westy',
+        serverID: '1234',
+        userID: '1',
+        userTag: 'test',
+        avatar: 'https://cdn.nhcarrigan.com/content/profile.jpg',
+        level: 1,
+        points: 100,
+        lastSeen: '2020-01-01',
+        cooldown: 1,
+      },
+      {
+        serverName: 'testy westy',
+        serverID: '1234',
+        userID: '2',
+        userTag: 'test2',
+        avatar: 'https://cdn.nhcarrigan.com/content/profile.jpg',
+        level: 2,
+        points: 200,
+        lastSeen: '2020-01-01',
+        cooldown: 1,
+      },
+    ];
 
     httpClientSpy.get.and.returnValue(of(expectedData));
 

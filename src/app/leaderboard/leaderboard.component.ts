@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LeaderboardUserInt } from 'src/assets/interfaces/LeaderboardInt';
+import { LeaderboardInt } from 'src/assets/interfaces/LeaderboardInt';
 import { LeaderboardService } from '../leaderboard.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class LeaderboardComponent implements OnInit {
   serverId: string = '';
   valid: boolean = false;
   error: boolean = false;
-  leaderboard: LeaderboardUserInt[] = [];
+  leaderboard: LeaderboardInt[] = [];
   serverName: string = '';
 
   constructor(
@@ -26,13 +26,16 @@ export class LeaderboardComponent implements OnInit {
     });
 
     if (this.serverId) {
-      this.service.getLeaderboard(this.serverId).subscribe((data) => {
-        this.leaderboard = data.users.sort((a, b) => b.level - a.level);
-        this.serverName = data.serverName;
-        this.valid = true;
-      }, () => {
-        this.error = true;
-      });
+      this.service.getLeaderboard(this.serverId).subscribe(
+        (data) => {
+          this.leaderboard = data.sort((a, b) => b.level - a.level);
+          this.serverName = data[0].serverName;
+          this.valid = true;
+        },
+        () => {
+          this.error = true;
+        }
+      );
     }
   }
 }
