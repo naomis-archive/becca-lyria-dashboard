@@ -12,13 +12,13 @@ export class LeaderboardService {
 
   constructor(private http: HttpClient) {}
 
-  public getLeaderboard(server: string): Observable<LeaderboardInt> {
+  public getLeaderboard(server: string): Observable<LeaderboardInt[]> {
     const dataFromCache = this.cache.get(this.URL + '/' + server);
 
     if (dataFromCache) {
       return of(dataFromCache);
     }
-    const response = this.http.get<LeaderboardInt>(this.URL + '/' + server);
+    const response = this.http.get<LeaderboardInt[]>(this.URL + '/' + server);
     response.subscribe((data) => this.cache.set(this.URL + '/' + server, data));
     return response;
   }
