@@ -24,13 +24,13 @@ describe('FooterComponent', () => {
   it('should render the expected text', () => {
     const footer = compiled.querySelector('footer');
     expect(footer.textContent.trim()).toBe(
-      '© 2021 - Nicholas Carrigan | Art by Moonlight'
+      '© 2021 - Naomi Carrigan | Art by Moonlight'
     );
   });
 
   it('should render the expected links', () => {
     const links = compiled.querySelectorAll('a');
-    expect(links[0].textContent.trim()).toBe('Nicholas Carrigan');
+    expect(links[0].textContent.trim()).toBe('Naomi Carrigan');
     expect(links[0].getAttribute('href')).toBe('https://www.nhcarrigan.com');
     expect(links[1].textContent.trim()).toBe('Moonlight');
     expect(links[1].getAttribute('href')).toBe(
