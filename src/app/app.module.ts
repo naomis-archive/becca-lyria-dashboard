@@ -5,10 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LeaderboardService } from './leaderboard.service';
-import { StarsComponent } from './stars/stars.component';
 import { CommandsComponent } from './commands/commands.component';
 import { StatsComponent } from './stats/stats.component';
 
@@ -17,17 +14,10 @@ import { StatsComponent } from './stats/stats.component';
     AppComponent,
     HomeComponent,
     FooterComponent,
-    LeaderboardComponent,
-    StarsComponent,
     CommandsComponent,
-    StatsComponent
+    StatsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [LeaderboardService],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
